@@ -13,48 +13,54 @@
 <body>
     <header>
         <nav>
-            <button class="circle transparent">
-                <i>arrow_back</i>
-            </button>
-            <h6 class="max center-align">Chain Rule</h6>
-            <button class="circle transparent">
-                <i>notifications</i>
-            </button>
-            <button class="circle transparent">
-                <i>settings</i>
-            </button>
-            <button class="circle fill">
-                <i>account_circle</i>
-            </button>
+            <div class="grid max">
+                <div class="s3 middle-align">
+                    <button class="circle transparent ripple">
+                        <i>arrow_back</i>
+                    </button>
+                    <h6 class="max" style="margin:0;margin-right: auto;">Chain Rule</h6>
+                    <button class="circle transparent ripple">
+                        <i>more_vert</i>
+                    </button>
+                </div>
+                <div class="s9 right-align">
+                    <button class="circle transparent ripple">
+                        <i>notifications</i>
+                    </button>
+                    <button class="circle transparent ripple">
+                        <i>settings</i>
+                    </button>
+                    <button class="circle fill ripple">
+                        <i>account_circle</i>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="responsive max">
         <div class="grid small-space">
             <div class="s3">
-                <article class="large middle-align center-align">
-                    <div>
-                        <i class="extra">mail</i>
-                        <h5>You have no new messages</h5>
-                        <p>Click the button to start a conversation</p>
-                        <div class="space"></div>
-                    </div>
-                </article>
-                <p>Enter your techincal question or problem</p>
-                <div class="field textarea border">
-                    <textarea placeholder="Type your question here..."></textarea>
+                <div class="height:100%">
+                    <p>test</p>
                 </div>
-                <div class="grid">
-                    <div class="s6">
-                        <button class="circle">
+                <div class="absolute bottom" style="width:100%">
+                    <p>Enter your techincal question or problem</p>
+                    <div class="field textarea border">
+                        <textarea placeholder="Type your question here..."></textarea>
+                    </div>
+                    <div class="grid">
+                        <div class="s6">
+                            <button class="circle">
                             <i>attach_file</i>
                             <input type="file">
                         </button>
-                    </div>
-                    <div class="s6 right-align">
-                        <button class="medium medium-elevate ripple">
+                        </div>
+                        <div class="s6 right-align">
+                            <button class="medium medium-elevate ripple">
                             <i>send</i>
                             <span>Ask</span>
                         </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,14 +82,35 @@
                     </nav>
                 </div>
                 <div class="page padding active">
-                    <h2>Chain Rule</h2>
-                    <p>The chain rule is a fundamental theorem in calculus that allows us to compute the derivative of a composite function. If we have two functions, \(f(x)\) and \(g(x)\), the chain rule states that:</p>
-                    <p>\[\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)\]</p>
-                    <p>In simpler terms, to differentiate a composite function, we differentiate the outer function and multiply it by the derivative of the inner function.</p>
-                    <p>For example, if \(f(x) = \sin(x)\) and \(g(x) = x^2\), then the derivative of the composite function \(f(g(x)) = \sin(x^2)\) is:</p>
-                    <p>\[\frac{d}{dx}[\sin(x^2)] = \cos(x^2) \cdot 2x\]</p>
-                    <p>Here, we first differentiate the outer function \(\sin(x)\) to get \(\cos(x^2)\), and then multiply it by the derivative of the inner function \(g(x) = x^2\), which is \(2x\).</p>
-                    <p>In practice, the chain rule is used extensively in calculus to differentiate complex functions that are composed of simpler functions.</p>
+                    <article class="large">
+                        <h2>Chain Rule</h2>
+                        <p>The chain rule is a fundamental theorem in calculus that allows us to compute the derivative of a composite function. If we have two functions, \(f(x)\) and \(g(x)\), the chain rule states that:</p>
+                        <p>\[\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)\]</p>
+                        <p>In simpler terms, to differentiate a composite function, we differentiate the outer function and multiply it by the derivative of the inner function.</p>
+                        <p>For example, if \(f(x) = \sin(x)\) and \(g(x) = x^2\), then the derivative of the composite function \(f(g(x)) = \sin(x^2)\) is:</p>
+                        <p>\[\frac{d}{dx}[\sin(x^2)] = \cos(x^2) \cdot 2x\]</p>
+                        <p>Here, we first differentiate the outer function \(\sin(x)\) to get \(\cos(x^2)\), and then multiply it by the derivative of the inner function \(g(x) = x^2\), which is \(2x\).</p>
+                        <p>In practice, the chain rule is used extensively in calculus to differentiate complex functions that are composed of simpler functions.</p>
+                        <div class="grid">
+                            <div class="s6 left-align middle-align">
+                                <p>Rate this AI answer: </p>
+                                <button class="border small-round medium">
+                                    <i>thumb_up</i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="border small-round medium">
+                                    <i>thumb_down</i>
+                                    <span>Dislike</span>
+                                </button>
+                            </div>
+                            <div class="s6 right-align">
+                                <button class="border small-round medium">
+                                    <span>See more details</span>
+                                    <i>arrow_forward</i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -122,8 +149,8 @@
             </div>
             <div class="s5 right-align middle-align">
                 <button class="large small-elevate">
-                    <i>person</i>
-                    <span>Invite</span>
+                    <i>group</i>
+                    <span>Invite Peer</span>
                 </button>
             </div>
         </div>
