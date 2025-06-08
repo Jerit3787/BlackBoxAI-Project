@@ -111,18 +111,56 @@
             <p>How can we help you today?</p>
             <article style="margin:24px 0px 72px 0px; width: 80%">
                 <div class="field small">
-                    <input type="text">
+                    <input type="text" value="Can you explain to me how to do chain rule?">
                 </div>
                 <div class="grid">
                     <div class="s6 left-align">
-                        <button class="small-rounded border">
+                        <button class="small-round border">
                                 <i>attach_file</i>
                                 <span>Upload File</span>
                             </button>
+                        <button class="small-round border">
+                            <i id="response-image">tune</i>
+                            <span id="response-name">Response Type</span>
+                            <menu id="model-selector" class="no-wrap">
+                            <li onclick="ui('#model-selector'); document.querySelector('#response-name').textContent = 'Student'; document.querySelector('#response-image').textContent = 'school'">
+                                <i>school</i>
+                                <div class="max">
+                                <div class="bold">Student</div>
+                                <span>Gives curated and detailed walkthrough answer</span>
+                                </div>
+                            </li>
+                            <li onclick="ui('#model-selector'); document.querySelector('#response-name').textContent = 'Lecturer'; document.querySelector('#response-image').textContent= 'co_present'">
+                                <i>co_present</i>
+                                <div class="max">
+                                <div class="bold">Lecturer</div>
+                                <span>Provides well-researched answers</span>
+                                </div>
+                            </li><li onclick="ui('#model-selector'); document.querySelector('#response-name').textContent = 'Lecturer'; document.querySelector('#response-image').textContent= 'co_present'">
+                                <i>code_blocks</i>
+                                <div class="max">
+                                <div class="bold">Developer</div>
+                                <span>Provides techincal answer suitable for coding</span>
+                                </div>
+                            </li>
+                            <li onclick="ui('#model-selector'); document.querySelector('#response-name').textContent = 'Lecturer'; document.querySelector('#response-image').textContent= 'co_present'">
+                                <i>work</i>
+                                <div class="max">
+                                <div class="bold">Buisnessman</div>
+                                <span>Provides thorough analysis answer for predictions</span>
+                                </div>
+                            </li>
+                        </menu>  
+                        </button>
                     </div>
                     <div class="s6 right-align">
-                        <button class="rounder medium">
+                        <button class="circle medium border">
+                            <i>mic</i>
+                            <div class="tooltip">Speak</div>
+                        </button>
+                        <button class="circle medium" onclick="window.location.href = './chat/'">
                                 <i>send</i>
+                                <div class="tooltip">Send</div>
                             </button>
                     </div>
                 </div>
