@@ -16,7 +16,7 @@
         <nav>
             <div class="grid max">
                 <div class="s3 middle-align">
-                    <button class="circle transparent ripple">
+                    <button class="circle transparent ripple" onclick="history.back()">
                         <i>arrow_back</i>
                     </button>
                     <h6 class="max" style="margin:0;margin-right: auto;">Chain Rule</h6>
@@ -28,8 +28,8 @@
                     <button class="circle transparent ripple">
                         <i>notifications</i>
                     </button>
-                    <button class="circle transparent ripple">
-                        <i>settings</i>
+                    <button class="circle transparent ripple" onclick="document.querySelector('#save-prompt').show()">
+                        <i>save</i>
                     </button>
                     <button class="circle fill ripple">
                         <i>account_circle</i>
@@ -81,13 +81,13 @@
                     <div class="s12" style="height: 100%; overflow:scroll">
                         <div style="margin-top:16px;">
                             <nav class="tabbed small">
-                                <a class="active ripple">
+                                <a class="active ripple" data-ui="#summary">
                                     <i>info</i>
                                     <span>Summary</span>
                                 </a>
-                                <a class="ripple">
+                                <a class="ripple" data-ui="#detailed-explaination">
                                     <i>code</i>
-                                    <span>Step-by-step</span>
+                                    <span>Detailed Explaination</span>
                                 </a>
                                 <a class="ripple">
                                     <i>chat</i>
@@ -95,7 +95,7 @@
                                 </a>
                             </nav>
                         </div>
-                        <div class="page padding border small-round">
+                        <div id="summary" class="page padding border small-round active">
                             <h2>Chain Rule</h2>
                             <p>The chain rule is a formula to compute the derivative of a composite function. If a variable x depends on the variable y, which in turn depends on the variable x, so that y = g(x) and z = f(y) = f(g(x)), then z depends on x
                                 via the intermediate variable y. The chain rule is expressed as:</p>
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="page padding active border small-round">
+                        <div id="detailed-explaination" class="page padding border small-round">
                             <h5>Solving Linear Equations</h5>
                             <p>Linear equations are fundamental in algebra. They involve variables raised to the first power and can be solved using basic algebraic operations. This guide will walk you through the steps to solve linear equations effectively.</p>
                             <h6>Step 1: Simplify Both Sides</h6>
@@ -192,8 +192,91 @@
                 </button>
             </div>
         </div>
-        </div>
     </footer>
+    <dialog id="save-prompt" style="width: 80%; height: max-content">
+        <h5>Save Chat</h5>
+        <div>Choose a location to save the chat</div>
+        <ul class="list border">
+            <li>
+                <div class="grid" style="width: 100%;">
+                    <div class="s6">
+                        <button class="circle transparent" disabled>
+                                <i>arrow_back</i>
+                            </button>
+                        <span>My Chats</span>
+                    </div>
+                    <div class="s6 right-align">
+                        <button class="circle transparent">
+                            <i>create_new_folder</i>
+                        </button>
+                        <button class="circle transparent">
+                                <i>sort</i>
+                            </button>
+                    </div>
+                </div>
+            </li>
+            <li class="ripple" onclick="document.querySelector('#save-prompt').close(); document.querySelector('#save-prompt-2').show()">
+                <button class="circle"><i>folder</i></button>
+                <div class="max">
+                    <h6 class="small">Mathematics</h6>
+                    <div>28 Jan 2024, 8.00pm</div>
+                </div>
+            </li>
+        </ul>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="document.querySelector('#save-prompt').close()">Cancel</button>
+            <button class="transparent link">Confirm</button>
+        </nav>
+    </dialog>
+    <dialog id="save-prompt-2" style="width: 80%; height: max-content">
+        <h5>Save Chat</h5>
+        <div>Choose a location to save the chat</div>
+        <ul class="list border">
+            <li>
+                <div class="grid" style="width: 100%;">
+                    <div class="s6">
+                        <button class="circle transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt-2').show()">
+                                <i>arrow_back</i>
+                            </button>
+                        <span>My Chats</span>
+                        <i>chevron_right</i>
+                        <span>Mathematics</span>
+                    </div>
+                    <div class="s6 right-align">
+                        <button class="circle transparent">
+                            <i>create_new_folder</i>
+                        </button>
+                        <button class="circle transparent">
+                                <i>sort</i>
+                            </button>
+                    </div>
+                </div>
+            </li>
+            <li class="ripple">
+                <button class="circle"><i>chat</i></button>
+                <div class="max">
+                    <h6 class="small">Chain Rule</h6>
+                    <div>28 Jan 2024, 8.00pm</div>
+                </div>
+            </li>
+            <li>
+                <div class="">
+                    <h6 class="small">Save As</h6>
+                </div>
+                <div class="field small max">
+                    <input type="text">
+                </div>
+            </li>
+        </ul>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="document.querySelector('#save-prompt-2').close()">Cancel</button>
+            <button class="transparent link" onclick="document.querySelector('#save-prompt-2').close(); ui('#snackbar');">Confirm</button>
+        </nav>
+    </dialog>
+    <div class="snackbar" id="snackbar">
+        <i>check</i>
+        <span>Chat successfully saved</span>
+    </div>
 </body>
 
 </html>

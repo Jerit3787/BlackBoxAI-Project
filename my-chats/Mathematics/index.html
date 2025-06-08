@@ -34,44 +34,24 @@
     </header>
     <nav class="left drawer surface-container">
         <div class="left-align" style="height: 4rem;">
-            <img src="assets/img/logo-white.png" height="48px" style="background-color: transparent;">
+            <img src="../../assets/img/logo-white.png" height="48px" style="background-color: transparent;">
         </div>
-        <a class="active">
+        <a href="../../">
             <i>edit_square</i>
             <div>New Chat</div>
         </a>
-        <a href="my-chats/">
+        <a class="active">
             <i>chat</i>
             <div>My Chats</div>
         </a>
         <a>
             <i>search</i>
             <div>Search Chats</div>
-            <menu class="max">
-                <li>
-                    <div class="field large prefix">
-                        <i class="front">arrow_back</i>
-                        <input>
-                    </div>
-                </li>
-                <li>
-                    <i>history</i>
-                    <div>Item 1</div>
-                </li>
-                <li>
-                    <i>history</i>
-                    <div>Item 2</div>
-                </li>
-                <li>
-                    <i>history</i>
-                    <div>Item 3</div>
-                </li>
-            </menu>
         </a>
         <hr>
         <label>Recent Chats</label>
-        <a href="chat/">
-            <div>Chain Rule</div>
+        <a>
+            <div>Chat 1</div>
         </a>
         <a>
             <div>Chat 2</div>
@@ -87,27 +67,40 @@
         </a>
     </nav>
     <main class="responsive max">
-        <div class="center-align" style="height: 100vh; display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;">
-            <h5>Welcome to BlackBox AI!</h5>
-            <p>How can we help you today?</p>
-            <article style="margin:24px 0px 72px 0px; width: 80%">
-                <div class="field small">
-                    <input type="text">
-                </div>
-                <div class="grid">
-                    <div class="s6 left-align">
-                        <button class="small-rounded border">
-                                <i>attach_file</i>
-                                <span>Upload File</span>
+        <div class="center-align" style="height: 100vh;">
+            <div style="width: 100%;">
+                <button class="small-rounded medium transparent" onclick="window.location.href = '../'">
+                    <h6>My Chats</h6>
+                </button>
+                <i>chevron_right</i>
+                <button class="small-rounded medium transparent">
+                    <h6>Mathematics</h6>
+                </button>
+            </div>
+            <ul class="list border">
+                <li>
+                    <div class="grid" style="width: 100%;">
+                        <div class="s6">
+                            <button class="circle transparent">
+                                <i>create_new_folder</i>
                             </button>
-                    </div>
-                    <div class="s6 right-align">
-                        <button class="rounder medium">
-                                <i>send</i>
+                        </div>
+                        <div class="s6 right-align">
+                            <button class="circle transparent">
+                                <i>sort</i>
                             </button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </li>
+                <li class="ripple" onclick="window.location.href = '../../chat/'">
+                    <button class="circle"><i>chat</i></button>
+                    <div class="max">
+                        <h6 class="small">Chain Rule</h6>
+                        <div>28 Jan 2024, 8.00pm</div>
+                    </div>
+                    <label><button class="round transparent"><i>more_vert</i></button></label>
+                </li>
+            </ul>
         </div>
     </main>
 </body>
