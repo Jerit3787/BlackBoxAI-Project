@@ -16,7 +16,26 @@
         <nav>
             <div class="grid max">
                 <div class="s3 middle-align">
-                    <h6 class="max">BlackBox AI</h6>
+                    <button class="small-round transparent center-align">
+                        <img id="model-image" src="/assets/img/openai-white.svg" style="display:none;">
+                        <h6 class="no-margin" id="model-name">BlackBox AI</h6>
+                        <menu id="model-selector" class="no-wrap">
+                            <li onclick="ui('#model-selector'); document.querySelector('#model-name').textContent = 'GPT-4o'; document.querySelector('#model-image').style.display = 'block'">
+                                <img class="circle tiny" src="/assets/img/openai-white.svg">
+                                <div class="max">
+                                <div class="bold">GPT-4o</div>
+                                <span>Recommended for daily use</span>
+                                </div>
+                            </li>
+                            <li onclick="ui('#model-selector'); document.querySelector('#model-name').textContent = 'GPT-4.1'; document.querySelector('#model-image').style.display = 'block'">
+                                <img class="circle tiny" src="/assets/img/openai-white.svg">
+                                <div class="max">
+                                <div class="bold">GPT-4.1</div>
+                                <span>Recommended for more detailed tasks</span>
+                                </div>
+                            </li>
+                        </menu>    
+                    </button>
                 </div>
                 <div class="s9 right-align">
                     <button class="circle transparent ripple">
