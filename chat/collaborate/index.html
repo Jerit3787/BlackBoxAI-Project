@@ -225,8 +225,13 @@
                     </div>
                 </nav>
             </div>
-            <div class="s2" style="width:100%;">
-
+            <div class="s2 right-align" style="width:100%;">
+                <button class="large round" onclick="ui('#invite-prompt')">
+                    <i>people</i>
+                </button>
+                <button class="large round border" onclick="window.location.replace('../')">
+                    <i>chat</i>
+                </button>
             </div>
             <div class="s3 right-align middle-align" style="background-color: var(--surface-container); border-left: 1px solid var(--secondary)">
                 <div class="grid">
@@ -341,6 +346,26 @@
     <div class="snackbar" id="snackbar">
         <i>check</i>
         <span>Chat successfully saved</span>
+    </div>
+    <dialog id="invite-prompt" style="width: 80%; height: max-content">
+        <h5>Invite Peer</h5>
+        <div>Choose a way to share</div>
+        <ul class="list border">
+            <li class="medium-margin">
+                <div class="max">
+                    <h6 class="small">Share via Link</h6>
+                    <div>Opening this link will allow them to share their prompt within the same chat</div>
+                </div>
+                <button onclick="ui('#link-snackbar')">Copy Link</button>
+            </li>
+        </ul>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="ui('#invite-prompt')">Close</button>
+        </nav>
+    </dialog>
+    <div class="snackbar" id="link-snackbar">
+        <i>check</i>
+        <span>Link successfully copied!</span>
     </div>
 </body>
 
