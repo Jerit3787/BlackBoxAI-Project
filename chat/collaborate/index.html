@@ -28,8 +28,8 @@
                     <button class="circle transparent ripple">
                         <i>notifications</i>
                     </button>
-                    <button class="circle transparent ripple">
-                        <i>settings</i>
+                    <button class="circle transparent ripple" onclick="document.querySelector('#save-prompt').show()">
+                        <i>save</i>
                     </button>
                     <button class="circle fill ripple">
                         <i>account_circle</i>
@@ -244,8 +244,105 @@
                 </div>
             </div>
         </div>
-        </div>
     </footer>
+    <dialog id="save-prompt" style="width: 80%; height: max-content">
+        <h5>Save Chat</h5>
+        <div>Choose a location to save the chat</div>
+        <ul class="list border">
+            <li>
+                <div class="grid" style="width: 100%;">
+                    <div class="s6">
+                        <button class="circle transparent" disabled>
+                                <i>arrow_back</i>
+                            </button>
+                        <button class="small-round transparent">
+                            <span>My Chats</span>
+                        </button>
+                    </div>
+                    <div class="s6 right-align">
+                        <button class="circle transparent">
+                            <i>create_new_folder</i>
+                        </button>
+                        <button class="circle transparent">
+                                <i>sort</i>
+                            </button>
+                    </div>
+                </div>
+            </li>
+            <li class="ripple" onclick="document.querySelector('#save-prompt').close(); document.querySelector('#save-prompt-2').show()">
+                <button class="circle"><i>folder</i></button>
+                <div class="max">
+                    <h6 class="small">Mathematics</h6>
+                    <div>28 Jan 2024, 8.00pm</div>
+                </div>
+            </li>
+            <li>
+                <div class="">
+                    <h6 class="small">Save As</h6>
+                </div>
+                <div class="field small max">
+                    <input type="text">
+                </div>
+            </li>
+        </ul>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="document.querySelector('#save-prompt').close()">Cancel</button>
+            <button class="transparent link" onclick="document.querySelector('#save-prompt').close(); ui('#snackbar');">Confirm</button>
+        </nav>
+    </dialog>
+    <dialog id="save-prompt-2" style="width: 80%; height: max-content">
+        <h5>Save Chat</h5>
+        <div>Choose a location to save the chat</div>
+        <ul class="list border">
+            <li>
+                <div class="grid" style="width: 100%;">
+                    <div class="s6">
+                        <button class="circle transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt').show()">
+                                <i>arrow_back</i>
+                            </button>
+                        <button class="small-round transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt').show()">
+                                                        <span>My Chats</span>
+                            </button>
+                        <i>chevron_right</i>
+                        <button class="small-round transparent">
+                        <span>Mathematics</span>
+                        </button>
+                    </div>
+                    <div class="s6 right-align">
+                        <button class="circle transparent">
+                            <i>create_new_folder</i>
+                        </button>
+                        <button class="circle transparent">
+                                <i>sort</i>
+                            </button>
+                    </div>
+                </div>
+            </li>
+            <li class="ripple">
+                <button class="circle"><i>chat</i></button>
+                <div class="max">
+                    <h6 class="small">Chain Rule</h6>
+                    <div>28 Jan 2024, 8.00pm</div>
+                </div>
+            </li>
+            <li>
+                <div class="">
+                    <h6 class="small">Save As</h6>
+                </div>
+                <div class="field small max">
+                    <input type="text">
+                </div>
+            </li>
+        </ul>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="document.querySelector('#save-prompt-2').close()">Cancel</button>
+            <button class="transparent link" onclick="document.querySelector('#save-prompt-2').close(); ui('#snackbar');">Confirm</button>
+        </nav>
+    </dialog>
+    <div class="snackbar" id="snackbar">
+        <i>check</i>
+        <span>Chat successfully saved</span>
+    </div>
 </body>
 
 </html>
