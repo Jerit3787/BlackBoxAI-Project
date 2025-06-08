@@ -203,7 +203,9 @@
                         <button class="circle transparent" disabled>
                                 <i>arrow_back</i>
                             </button>
-                        <span>My Chats</span>
+                        <button class="small-round transparent">
+                            <span>My Chats</span>
+                        </button>
                     </div>
                     <div class="s6 right-align">
                         <button class="circle transparent">
@@ -225,7 +227,7 @@
         </ul>
         <nav class="right-align no-space">
             <button class="transparent link" onclick="document.querySelector('#save-prompt').close()">Cancel</button>
-            <button class="transparent link">Confirm</button>
+            <button class="transparent link" onclick="document.querySelector('#save-prompt').close(); ui('#snackbar');">Confirm</button>
         </nav>
     </dialog>
     <dialog id="save-prompt-2" style="width: 80%; height: max-content">
@@ -235,12 +237,16 @@
             <li>
                 <div class="grid" style="width: 100%;">
                     <div class="s6">
-                        <button class="circle transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt-2').show()">
+                        <button class="circle transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt').show()">
                                 <i>arrow_back</i>
                             </button>
-                        <span>My Chats</span>
+                        <button class="small-round transparent" onclick="document.querySelector('#save-prompt-2').close(); document.querySelector('#save-prompt').show()">
+                                                        <span>My Chats</span>
+                            </button>
                         <i>chevron_right</i>
+                        <button class="small-round transparent">
                         <span>Mathematics</span>
+                        </button>
                     </div>
                     <div class="s6 right-align">
                         <button class="circle transparent">
