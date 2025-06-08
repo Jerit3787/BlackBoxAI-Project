@@ -5,6 +5,19 @@
     margin-top: 16px;
 }
 
+.right-chat article {
+    width: 80%;
+}
+
+.left-chat {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.left-chat article {
+    width: 80%;
+}
+
 .page {
     margin-top: 16px;
 }
