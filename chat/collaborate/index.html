@@ -51,32 +51,6 @@
                     </div>
                     <article class="fill" style="width: max-content;">Here is the explaination of chain rule.</article>
                 </div>
-                <div class="grid fixed bottom" style="width: calc(100% - 16px); max-width: calc(100% - 16px); display:none;">
-                    <div class="s3">
-                        <article style="margin-right: 8px; margin-bottom: 8px">
-                            <div class="field small" style="margin-bottom: 8px;">
-                                <input type="text">
-                            </div>
-                            <div class="grid">
-                                <div class="s6 left-align">
-                                    <button class="circle medium transparent ripple">
-                            <i>attach_file</i>
-                        </button>
-                                </div>
-                                <div class="s6 right-align">
-                                    <button class="circle medium ripple">
-                            <i>send</i>
-                        </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="s9">
-                        <div class="fill" style="height: 56px">
-
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="s6" style="height: calc(100vh - 9rem); max-height: calc(100vh - 9rem); overflow:scroll">
                 <div class="grid">
@@ -183,13 +157,24 @@
     <footer style="position:absolute; bottom: 0px; width: 100%;">
         <div class="grid">
             <div class="s3" style="border-right: 1px solid var(--secondary)">
-                <div class="grid">
-                    <div class="s3">
-                        <button class="circle medium ripple transparent">
-                            <i>attach_file</i>
-                        </button>
+                <div class="grid no-space">
+                    <div class="s2">
+                        <nav class="min" data-ui="#attachments">
+                            <button class="medium circle"><i>north_east</i></button>
+                            <menu class="top transparent no-wrap" id="attachments">
+                                <li>
+                                    <button class="fill"><i>attach_file</i><span>Upload File</span><input type="file"></button>
+                                </li>
+                                <li>
+                                    <button class="fill"><i>tune</i><span>Response Type</span></button>
+                                </li>
+                                <li>
+                                    <button class="fill"><i>mic</i><span>Speak</span></button>
+                                </li>
+                            </menu>
+                        </nav>
                     </div>
-                    <div class="s6">
+                    <div class="s7">
                         <div class="field small" style="margin-bottom: 8px; width: auto;">
                             <input type="text">
                         </div>
