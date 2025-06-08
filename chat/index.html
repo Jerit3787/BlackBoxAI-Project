@@ -15,23 +15,27 @@
     <header>
         <nav>
             <div class="grid max">
-                <div class="s3 middle-align">
+                <div class="s6 middle-align">
                     <button class="circle transparent ripple" onclick="history.back()">
                         <i>arrow_back</i>
                     </button>
                     <button class="small-round transparent">
                         <h6>Chain Rule</h6>
                     </button>
+                    <span>Saved at: Mathematics</span>
                 </div>
-                <div class="s9 right-align">
+                <div class="s6 right-align">
                     <button class="circle transparent ripple">
                         <i>notifications</i>
+                        <div class="tooltip bottom">Notification</div>
                     </button>
                     <button class="circle transparent ripple" onclick="document.querySelector('#save-prompt').show()">
                         <i>save</i>
+                        <div class="tooltip bottom">Save Chat</div>
                     </button>
                     <button class="circle fill ripple">
                         <i>account_circle</i>
+                        <div class="tooltip bottom">Account</div>
                     </button>
                 </div>
             </div>
@@ -81,11 +85,11 @@
                             <div class="grid">
                                 <div class="s6 left-align middle-align">
                                     <p>Rate this AI answer: </p>
-                                    <button id="helpful" class="border small-round medium" onclick="document.querySelector('#helpful').classList.toggle('active')">
+                                    <button id="helpful" class="border small-round medium" onclick="document.querySelector('#helpful').classList.toggle('active'); ui('#feedback-snackbar'); document.querySelector('#not-helpful').classList.remove('active')">
                                     <i>thumb_up</i>
                                     <span>Helpful</span>
                                 </button>
-                                    <button class="border small-round medium">
+                                    <button id="not-helpful" class="border small-round medium" onclick="document.querySelector('#not-helpful').classList.toggle('active'); ui('#feedback-snackbar'); document.querySelector('#helpful').classList.remove('active')">
                                     <i>thumb_down</i>
                                     <span>Not Helpful</span>
                                 </button>
@@ -300,6 +304,10 @@
     <div class="snackbar" id="link-snackbar">
         <i>check</i>
         <span>Link successfully copied!</span>
+    </div>
+    <div class="snackbar" id="feedback-snackbar">
+        <i>check</i>
+        <span>Thank you for the reponse! We will improve the response next time!</span>
     </div>
 </body>
 
