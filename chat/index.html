@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.11.11/dist/cdn/beer.min.css" rel="stylesheet" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.11.11/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <link href="../assets/css/other.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="grid max">
+                <div class="s3 middle-align">
+                    <button class="circle transparent ripple">
+                        <i>arrow_back</i>
+                    </button>
+                    <h6 class="max" style="margin:0;margin-right: auto;">Chain Rule</h6>
+                    <button class="circle transparent ripple">
+                        <i>more_vert</i>
+                    </button>
+                </div>
+                <div class="s9 right-align">
+                    <button class="circle transparent ripple">
+                        <i>notifications</i>
+                    </button>
+                    <button class="circle transparent ripple">
+                        <i>settings</i>
+                    </button>
+                    <button class="circle fill ripple">
+                        <i>account_circle</i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="fixed" style="width: 100vw; height: calc(100vh - 9rem); max-width: 100vw; max-height: calc(100vh - 9rem);margin-top: 4rem;overflow:hidden">
+        <div class="grid" style="width: 100%; height:100%">
+            <div class="s3" style="border-right: 1px solid var(--secondary); overflow: scroll;height: calc(100vh - 9rem);">
+                <div style="height:85%; overflow: scroll;">
+                    <div class="right-align right-chat">
+                        <article style="width: max-content;">
+                            Can you explain to me how to do chain rule?
+                        </article>
+                    </div>
+                    <article class="fill" style="width: max-content;">Here is the explaination of chain rule.</article>
+                </div>
+                <div class="grid fixed bottom" style="width: calc(100% - 16px); max-width: calc(100% - 16px); display:none;">
+                    <div class="s3">
+                        <article style="margin-right: 8px; margin-bottom: 8px">
+                            <div class="field small" style="margin-bottom: 8px;">
+                                <input type="text">
+                            </div>
+                            <div class="grid">
+                                <div class="s6 left-align">
+                                    <button class="circle medium transparent ripple">
+                            <i>attach_file</i>
+                        </button>
+                                </div>
+                                <div class="s6 right-align">
+                                    <button class="circle medium ripple">
+                            <i>send</i>
+                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="s9">
+                        <div class="fill" style="height: 56px">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s9" style="height: calc(100vh - 9rem); max-height: calc(100vh - 9rem); overflow:scroll">
+                <div class="grid">
+                    <div class="s12" style="height: 100%; overflow:scroll">
+                        <div style="margin-top:16px;">
+                            <nav class="tabbed small">
+                                <a class="active ripple">
+                                    <i>info</i>
+                                    <span>Summary</span>
+                                </a>
+                                <a class="ripple">
+                                    <i>code</i>
+                                    <span>Step-by-step</span>
+                                </a>
+                                <a class="ripple">
+                                    <i>chat</i>
+                                    <span>Visual Aids</span>
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="page padding border small-round">
+                            <h2>Chain Rule</h2>
+                            <p>The chain rule is a formula to compute the derivative of a composite function. If a variable x depends on the variable y, which in turn depends on the variable x, so that y = g(x) and z = f(y) = f(g(x)), then z depends on x
+                                via the intermediate variable y. The chain rule is expressed as:</p>
+                            <p>dz/dx = (dz/dy) * (dy/dx)</p>
+                            <p><b>Example</b></p>
+                            <p>Let's say we have x = sin(y) and y = x^2. We want to find dz/dx.</p>
+                            <p>1. Find dz/dy: The derivative of sin(y) with respect to y is cos(y).</p>
+                            <p>2. Find dy/dx: The derivative of x^2 with respect to x is 2x.</p>
+                            <p>3. Apply the chain rule: dz/dx = cos(y) * 2x. Since y = x^2, we substitute y back in: dz/dx = cos(x^2) * 2x.</p>
+                            <div class="grid">
+                                <div class="s6 left-align middle-align">
+                                    <p>Rate this AI answer: </p>
+                                    <button class="border small-round medium">
+                                    <i>thumb_up</i>
+                                    <span>Helpful</span>
+                                </button>
+                                    <button class="border small-round medium">
+                                    <i>thumb_down</i>
+                                    <span>Not Helpful</span>
+                                </button>
+                                </div>
+                                <div class="s6 right-align">
+                                    <button class="border small-round medium"><span>See more details</span><i>arrow_forward</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page padding active border small-round">
+                            <h5>Solving Linear Equations</h5>
+                            <p>Linear equations are fundamental in algebra. They involve variables raised to the first power and can be solved using basic algebraic operations. This guide will walk you through the steps to solve linear equations effectively.</p>
+                            <h6>Step 1: Simplify Both Sides</h6>
+                            <p>If either side of the equation has terms that can be combined or simplified, do so first. This might involve distributing terms or combining like terms.</p>
+                            <h6>Step 2: Isolate the Variable Term</h6>
+                            <p>Use addition or subtraction to move all terms involving the variable to one side of the equation and all contant terms to the other side.</p>
+                            <h6>Step 3: Solve for the Variable</h6>
+                            <p>If the variable term has a coefficient other than 1, divide both sides of the equation by that coefficient to solve for the variable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="position:absolute; bottom: 0px; width: 100%;">
+        <div class="grid no-space">
+            <div class="s3">
+                <div class="grid">
+                    <div class="s3">
+                        <button class="circle medium ripple transparent">
+                            <i>attach_file</i>
+                        </button>
+                    </div>
+                    <div class="s6">
+                        <div class="field small" style="margin-bottom: 8px; width: auto;">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="s3">
+                        <button class="circle medium ripple">
+                            <i>send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="s4" style="background-color: var(--surface-container);">
+                <nav>
+                    <div class="center-align">
+                        <button class="circle chip fill">
+                            <div class="tooltip">8.00pm</div>
+                        </button>
+                    </div>
+                    <hr class="max">
+                    <div class="center-align">
+                        <button class="circle chip fill"></button>
+                        <div class="tooltip">8.10pm</div>
+                        </button>
+                    </div>
+                    <hr class="max">
+                    <div class="center-align">
+                        <button class="circle chip fill"></button>
+                        <div class="tooltip">8.20pm</div>
+                        </button>
+                    </div>
+                    <hr class="max">
+                    <div class="center-align">
+                        <button class="circle chip primary"><i>done</i></button>
+                        <div class="tooltip">Current</div>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <div class="s5 right-align middle-align" style="background-color: var(--surface-container);">
+                <button class="large small-elevate">
+                    <i>group</i>
+                    <span>Invite Peer</span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>

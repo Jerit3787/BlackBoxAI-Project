@@ -1,0 +1,10 @@
+.right-chat {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 16px;
+}
+
+.page {
+    margin-top: 16px;
+}
