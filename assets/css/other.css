@@ -5,7 +5,7 @@
 }
 
 .right-chat article {
-    width: 80%;
+    max-width: 70%;
 }
 
 .left-chat {
@@ -13,7 +13,7 @@
 }
 
 .left-chat article {
-    width: 80%;
+    max-width: 70%;
 }
 
 .page {

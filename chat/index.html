@@ -43,7 +43,7 @@
                         <i>notifications</i>
                         <div class="tooltip bottom">Notification</div>
                     </button>
-                    <button class="circle transparent ripple">
+                    <button class="circle transparent ripple" data-ui="#history-fullscreen">
                         <i>history</i>
                         <div class="tooltip bottom">Chat History</div>
                     </button>
@@ -68,7 +68,7 @@
             <div class="s3 surface-container-low" style="overflow: scroll;height: calc(100vh - 4rem);width: 100%; padding: 12px 6px 6px 12px;">
                 <div style="height:calc(100vh - 12rem);width:100%; overflow: scroll;">
                     <div class="right-align right-chat">
-                        <article class="surface">
+                        <article class="surface left-align">
                             Can you explain to me how to do chain rule?
                         </article>
                     </div>
@@ -93,9 +93,13 @@
                                             <span>Upload File</span>
                                             <input type="file">
                                         </li>
+                                        <li>
+                                            <i>mic</i>
+                                            <span>Voice</span>
+                                        </li>
                                     </menu>
                                 </button>
-                                <button class="small-round border small no-margin"><i>tune</i>Response Type</button>
+                                <button class="circle border small no-margin"><i>tune</i><div class="tooltip top">Response Type</div></button>
                             </div>
                             <div class="s2 right-align">
                                 <button class="circle small no-margin"><i>arrow_upward</i><div class="tooltip top">Send</div></button>
@@ -331,7 +335,7 @@
     </dialog>
     <dialog id="chat-sidenav" class="right">
         <div class="right-align right-chat">
-            <article>
+            <article class="left-align">
                 Hi Ahmad, could you help with the prompt?
             </article>
         </div>
@@ -360,7 +364,7 @@
         </article>
         <div class="space"></div>
         <div class="right-align right-chat">
-            <article>
+            <article class="left-align">
                 Thanks Ahmad, appreciated!
             </article>
         </div>
@@ -382,6 +386,89 @@
             <span>Ali - 10:02pm</span>
         </div>
         <div class="space"></div>
+    </dialog>
+    <dialog id="history-fullscreen" class="max no-padding">
+        <header>
+            <nav>
+                <div class="grid max no-space" style="height: 4rem;">
+                    <div class="s9 middle-align medium-padding">
+                        <button class="circle transparent" onclick="ui('#history-fullscreen')">
+                            <i>arrow_back</i>
+                        </button>
+                        <span class="bold">Today, 08:00pm</span>
+                    </div>
+                    <div class="s3 surface-container-low middle-align medium-padding">
+                        <h6>Chat History</h6>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="max no-padding">
+            <div class="grid no-space max">
+                <div class="s9 medium-padding" style="max-height: calc(100vh - 4rem);overflow: scroll;">
+                    <div style="margin-top:16px;">
+                        <nav class="tabbed small">
+                            <a class="active ripple" data-ui="#history-summary">
+                                <i>info</i>
+                                <span>Summary</span>
+                            </a>
+                            <a class="ripple" data-ui="#history-detailed-explaination">
+                                <i>code</i>
+                                <span>Detailed Explaination</span>
+                            </a>
+                            <a class="ripple">
+                                <i>chat</i>
+                                <span>Visual Aids</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="history-summary" class="page padding border small-round active">
+                        <h2>Chain Rule</h2>
+                        <p>The chain rule is a formula to compute the derivative of a composite function. If a variable x depends on the variable y, which in turn depends on the variable x, so that y = g(x) and z = f(y) = f(g(x)), then z depends on x via
+                            the intermediate variable y. The chain rule is expressed as:</p>
+                        <p>dz/dx = (dz/dy) * (dy/dx)</p>
+                        <p><b>Example</b></p>
+                        <p>Let's say we have x = sin(y) and y = x^2. We want to find dz/dx.</p>
+                        <p>1. Find dz/dy: The derivative of sin(y) with respect to y is cos(y).</p>
+                        <p>2. Find dy/dx: The derivative of x^2 with respect to x is 2x.</p>
+                        <p>3. Apply the chain rule: dz/dx = cos(y) * 2x. Since y = x^2, we substitute y back in: dz/dx = cos(x^2) * 2x.</p>
+                        <div class="grid">
+                            <div class="s6 left-align middle-align">
+                            </div>
+                            <div class="s6 right-align">
+                                <button class="border small-round medium" onclick="ui('#history-detailed-explaination')"><span>See more details</span><i>arrow_forward</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="history-detailed-explaination" class="page padding border small-round">
+                        <h5>Solving Linear Equations</h5>
+                        <p>Linear equations are fundamental in algebra. They involve variables raised to the first power and can be solved using basic algebraic operations. This guide will walk you through the steps to solve linear equations effectively.</p>
+                        <h6>Step 1: Simplify Both Sides</h6>
+                        <p>If either side of the equation has terms that can be combined or simplified, do so first. This might involve distributing terms or combining like terms.</p>
+                        <h6>Step 2: Isolate the Variable Term</h6>
+                        <p>Use addition or subtraction to move all terms involving the variable to one side of the equation and all contant terms to the other side.</p>
+                        <h6>Step 3: Solve for the Variable</h6>
+                        <p>If the variable term has a coefficient other than 1, divide both sides of the equation by that coefficient to solve for the variable.</p>
+                    </div>
+                </div>
+                <div class="s3 surface-container-low" style="min-height: calc(100vh - 4rem);max-height: calc(100vh - 4rem);overflow: scroll;">
+                    <ul class="list border">
+                        <li class="secondary medium-padding">
+                            <div class="max">
+                                <h6 class="small bold">9 June, 08:00pm</h6>
+                                <div>You - Current version</div>
+                            </div>
+                        </li>
+                        <li class="ripple medium-padding">
+                            <div class="max">
+                                <h6 class="small bold">9 June, 07:25pm</h6>
+                                <div>Ahmad</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
     </dialog>
 </body>
 
