@@ -12,26 +12,48 @@
 </head>
 
 <body>
-    <header>
+    <header style="padding:0;">
         <nav>
-            <div class="grid max">
-                <div class="s6 middle-align">
-                    <button class="circle transparent ripple" onclick="history.back()">
-                        <i>arrow_back</i>
+            <div class="grid max surface" style="height: 4rem;">
+                <div class="s3 surface-container-low middle-align">
+                    <button class="circle transparent" data-ui="#menu-sidenav">
+                        <i>menu</i>
+                        <div class="tooltip bottom">Open Sidebar</div>
                     </button>
-                    <button class="small-round transparent">
-                        <h6>Chain Rule</h6>
+                    <button class="circle transparent" onclick="window.location.href = '../'">
+                        <i>edit_square</i>
+                        <div class="tooltip bottom">New Chat</div>
                     </button>
-                    <span>Saved at: Mathematics</span>
                 </div>
-                <div class="s6 right-align">
+                <div class="s4 middle-align">
+                    <button class="small-round transparent no-margin">
+                        <h6>Chain Rule</h6>
+                        <i>arrow_drop_down</i>
+                        <menu>
+                            <li>Rename</li>
+                        </menu>
+                    </button>
+                    <button class="circle transparent no-margin">
+                    <i>cloud_done</i>
+                    <div class="tooltip bottom">Chat saved at /Mathematics/</div>
+                    </button>
+                </div>
+                <div class="s5 right-align middle-align">
                     <button class="circle transparent ripple">
                         <i>notifications</i>
                         <div class="tooltip bottom">Notification</div>
                     </button>
+                    <button class="circle transparent ripple">
+                        <i>history</i>
+                        <div class="tooltip bottom">Chat History</div>
+                    </button>
                     <button class="circle transparent ripple" onclick="document.querySelector('#save-prompt').show()">
                         <i>save</i>
                         <div class="tooltip bottom">Save Chat</div>
+                    </button>
+                    <button class="round" onclick="ui('#invite-prompt')">
+                        <i>group</i>
+                        <span>Invite</span>
                     </button>
                     <button class="circle fill ripple">
                         <i>account_circle</i>
@@ -41,19 +63,48 @@
             </div>
         </nav>
     </header>
-    <main class="fixed" style="width: 100vw; height: calc(100vh - 9rem); max-width: 100vw; max-height: calc(100vh - 9rem);margin-top: 4rem;overflow:hidden">
+    <main class="fixed" style="width: 100vw; height: calc(100vh - 4rem); max-width: 100vw; max-height: calc(100vh - 4rem);margin-top: 4rem;overflow:hidden; padding:0;">
         <div class="grid" style="width: 100%; height:100%">
-            <div class="s3" style="border-right: 1px solid var(--secondary); overflow: scroll;height: calc(100vh - 9rem);">
-                <div style="height:85%; overflow: scroll;">
+            <div class="s3 surface-container-low" style="overflow: scroll;height: calc(100vh - 4rem);width: 100%; padding: 12px 6px 6px 12px;">
+                <div style="height:calc(100vh - 12rem);width:100%; overflow: scroll;">
                     <div class="right-align right-chat">
-                        <article style="width: max-content;">
+                        <article class="surface">
                             Can you explain to me how to do chain rule?
                         </article>
                     </div>
-                    <article class="fill" style="width: max-content;">Here is the explaination of chain rule.</article>
+                    <div class="space"></div>
+                    <div class="left-chat">
+                        <article class="fill">Here is the explaination of chain rule.</article>
+                    </div>
+                </div>
+                <div style="height: calc(100vh - 91rem); min-height: calc(100vh - 91rem); width: 100%;">
+                    <article class="fill" style="padding: 6px;">
+                        <div class="field no-margin">
+                            <input type="text">
+                        </div>
+                        <div class="grid no-space small-margin">
+                            <div class="s10">
+                                <button class="circle small transparent no-margin">
+                                    <i>add</i>
+                                    <div class="tooltip top">More Option</div>
+                                    <menu class="top no-wrap">
+                                        <li>
+                                            <i>attach_file</i>
+                                            <span>Upload File</span>
+                                            <input type="file">
+                                        </li>
+                                    </menu>
+                                </button>
+                                <button class="small-round border small no-margin"><i>tune</i>Response Type</button>
+                            </div>
+                            <div class="s2 right-align">
+                                <button class="circle small no-margin"><i>arrow_upward</i><div class="tooltip top">Send</div></button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="s9" style="height: calc(100vh - 9rem); max-height: calc(100vh - 9rem); overflow:scroll">
+            <div class="s9" style="height: calc(100vh - 4rem); max-height: calc(100vh - 4rem); overflow:scroll">
                 <div class="grid">
                     <div class="s12" style="height: 100%; overflow:scroll">
                         <div style="margin-top:16px;">
@@ -114,76 +165,6 @@
             </div>
         </div>
     </main>
-    <footer style="position:absolute; bottom: 0px; width: 100%;">
-        <div class="grid no-space">
-            <div class="s3" style="border-right: 1px solid var(--secondary)">
-                <div class="grid no-space">
-                    <div class="s2">
-                        <nav class="min" data-ui="#attachments">
-                            <button class="medium circle"><i>north_east</i></button>
-                            <menu class="top transparent no-wrap" id="attachments">
-                                <li>
-                                    <button class="fill"><i>attach_file</i><span>Upload File</span><input type="file"></button>
-                                </li>
-                                <li>
-                                    <button class="fill"><i>tune</i><span>Response Type</span></button>
-                                </li>
-                                <li>
-                                    <button class="fill"><i>mic</i><span>Speak</span></button>
-                                </li>
-                            </menu>
-                        </nav>
-                    </div>
-                    <div class="s7">
-                        <div class="field small" style="margin-bottom: 8px; width: auto;">
-                            <input type="text">
-                        </div>
-                    </div>
-                    <div class="s3">
-                        <button class="circle medium ripple">
-                            <i>send</i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="s4" style="background-color: var(--surface-container);">
-                <nav>
-                    <div class="center-align">
-                        <button class="circle chip fill">
-                            <div class="tooltip">8.00pm</div>
-                        </button>
-                    </div>
-                    <hr class="max">
-                    <div class="center-align">
-                        <button class="circle chip fill"></button>
-                        <div class="tooltip">8.10pm</div>
-                        </button>
-                    </div>
-                    <hr class="max">
-                    <div class="center-align">
-                        <button class="circle chip fill"></button>
-                        <div class="tooltip">8.20pm</div>
-                        </button>
-                    </div>
-                    <hr class="max">
-                    <div class="center-align">
-                        <button class="circle chip primary"><i>done</i></button>
-                        <div class="tooltip">Current</div>
-                        </button>
-                    </div>
-                </nav>
-            </div>
-            <div class="s5 right-align middle-align" style="background-color: var(--surface-container);">
-                <button class="large small-elevate" onclick="ui('#invite-prompt')">
-                    <i>group</i>
-                    <span>Invite Peer</span>
-                </button>
-                <button class="large round border" onclick="window.location.replace('./collaborate')">
-                    <i>chat</i>
-                </button>
-            </div>
-        </div>
-    </footer>
     <dialog id="save-prompt" style="width: 80%; height: max-content">
         <h5>Save Chat</h5>
         <div>Choose a location to save the chat</div>
@@ -309,6 +290,99 @@
         <i>check</i>
         <span>Thank you for the reponse! We will improve the response next time!</span>
     </div>
+    <button class="circle extra fixed bottom right" style="margin: 0px 24px 24px 0px" data-ui="#chat-sidenav"><i>chat</i></button>
+    <dialog id="menu-sidenav" class="left no-padding">
+        <nav class="drawer small-margin">
+            <button class="small-round large transparent" style="padding:0 ;max-width: max-content;;" onclick="window.location.href = '../'">
+                <img src="../assets/img/logo-white.png" style="background-color: transparent;min-height: 48px; min-width: 48px; max-width: 48px;">
+            </button>
+            <div class="space"></div>
+            <a href="../">
+                <i>edit_square</i>
+                <div>New Chat</div>
+            </a>
+            <a href="../my-chats/">
+                <i>chat</i>
+                <div>My Chats</div>
+            </a>
+            <a>
+                <i>search</i>
+                <div>Search Chats</div>
+            </a>
+            <hr>
+            <label class="bold">Recent Chats</label>
+            <a class="active" href="chat/">
+                <i>chat</i>
+                <div>Chain Rule</div>
+            </a>
+            <a>
+                <div>Chat 2</div>
+            </a>
+            <a>
+                <div>Chat 3</div>
+            </a>
+            <a>
+                <div>Chat 4</div>
+            </a>
+            <a>
+                <div>Chat 5</div>
+            </a>
+        </nav>
+    </dialog>
+    <dialog id="chat-sidenav" class="right">
+        <div class="right-align right-chat">
+            <article>
+                Hi Ahmad, could you help with the prompt?
+            </article>
+        </div>
+        <div class="right-align">
+            <span>Ali - 9:45pm</span>
+        </div>
+        <div class="space"></div>
+        <div class="left-chat">
+            <article class="fill">Yeah, sure. I'll send it to you</article>
+        </div>
+        <div>
+            <span>Ahmad - 9:47pm</span>
+        </div>
+        <div class="space"></div>
+        <article class="fill no-margin">
+            <div class="grid">
+                <div class="s9">
+                    Ahmad's Prompt<br> 9:50pm
+                </div>
+                <div class="s3 middle-align">
+                    <button class="round small ripple transparent">
+                                <i>arrow_forward</i>
+                            </button>
+                </div>
+            </div>
+        </article>
+        <div class="space"></div>
+        <div class="right-align right-chat">
+            <article>
+                Thanks Ahmad, appreciated!
+            </article>
+        </div>
+        <div class="right-align">
+            <span>Ali - 9:53pm</span>
+        </div>
+        <div class="space"></div>
+        <div class="left-chat">
+            <article class="fill">Yeah, you're welcome!</article>
+        </div>
+        <div>
+            <span>Ahmad - 10:00pm</span>
+        </div>
+        <div class="space"></div>
+        <div class="left-chat">
+            <article class="fill">I think there is something not complete about this article.</article>
+        </div>
+        <div>
+            <span>Ali - 10:02pm</span>
+        </div>
+        <div class="space"></div>
+    </dialog>
 </body>
 
 </html>

@@ -19,6 +19,7 @@
                     <button class="small-round transparent center-align">
                         <img id="model-image" src="/assets/img/openai-white.svg" style="display:none;">
                         <h6 class="no-margin" id="model-name">BlackBox AI</h6>
+                        <i>arrow_drop_down</i>
                         <menu id="model-selector" class="no-wrap">
                             <li onclick="ui('#model-selector'); document.querySelector('#model-name').textContent = 'GPT-4o'; document.querySelector('#model-image').style.display = 'block'">
                                 <img class="circle tiny" src="/assets/img/openai-white.svg">
@@ -53,7 +54,9 @@
     </header>
     <nav class="left drawer surface-container">
         <div class="left-align" style="height: 4rem;">
-            <img src="assets/img/logo-white.png" height="48px" style="background-color: transparent;">
+            <button class="small-round large transparent" style="padding:0">
+                <img src="assets/img/logo-white.png" style="background-color: transparent;min-height: 48px; min-width: 48px;">
+            </button>
         </div>
         <a class="active">
             <i>edit_square</i>
@@ -110,7 +113,7 @@
             <h5>Welcome to BlackBox AI!</h5>
             <p>How can we help you today?</p>
             <article style="margin:24px 0px 72px 0px; width: 80%">
-                <div class="field small">
+                <div class="field small no-margin">
                     <input type="text" value="Can you explain to me how to do chain rule?">
                 </div>
                 <div class="grid">
